@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sudoku Solver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BootStrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- My CSS File -->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body class='text-center'>
+    <h3 class='text-warning mt-3'>JB's Sudoku Solver</h3>
+    <div id='board' class='mt-3 text-center'>
+        <input type='text' id='a00' class='square r1 c1'></input>
+        <input type='text' id='a01' class='square r1 c2'></input>
+        <input type='text' id='a02' class='square r1 c3'></input>
+        <input type='text' id='a03' class='square r1 c4'></input>
+        <input type='text' id='a04' class='square r1 c5'></input>
+        <input type='text' id='a05' class='square r1 c6'></input>
+        <input type='text' id='a06' class='square r1 c7'></input>
+        <input type='text' id='a07' class='square r1 c8'></input>
+        <input type='text' id='a08' class='square r1 c9'></input>
+        <br>
+        <input type='text' id='a10' class='square r2 c1'></input>
+        <input type='text' id='a11' class='square r2 c2'></input>
+        <input type='text' id='a12' class='square r2 c3'></input>
+        <input type='text' id='a13' class='square r2 c4'></input>
+        <input type='text' id='a14' class='square r2 c5'></input>
+        <input type='text' id='a15' class='square r2 c6'></input>
+        <input type='text' id='a16' class='square r2 c7'></input>
+        <input type='text' id='a17' class='square r2 c8'></input>
+        <input type='text' id='a18' class='square r2 c9'></input>
+        <br>
+        <input type='text' id='a20' class='square r3 c1'></input>
+        <input type='text' id='a21' class='square r3 c2'></input>
+        <input type='text' id='a22' class='square r3 c3'></input>
+        <input type='text' id='a23' class='square r3 c4'></input>
+        <input type='text' id='a24' class='square r3 c5'></input>
+        <input type='text' id='a25' class='square r3 c6'></input>
+        <input type='text' id='a26' class='square r3 c7'></input>
+        <input type='text' id='a27' class='square r3 c8'></input>
+        <input type='text' id='a28' class='square r3 c9'></input>
+        <br>
+        <input type='text' id='a30' class='square r4 c1'></input>
+        <input type='text' id='a31' class='square r4 c2'></input>
+        <input type='text' id='a32' class='square r4 c3'></input>
+        <input type='text' id='a33' class='square r4 c4'></input>
+        <input type='text' id='a34' class='square r4 c5'></input>
+        <input type='text' id='a35' class='square r4 c6'></input>
+        <input type='text' id='a36' class='square r4 c7'></input>
+        <input type='text' id='a37' class='square r4 c8'></input>
+        <input type='text' id='a38' class='square r4 c9'></input>
+        <br>
+        <input type='text' id='a40' class='square r5 c1'></input>
+        <input type='text' id='a41' class='square r5 c2'></input>
+        <input type='text' id='a42' class='square r5 c3'></input>
+        <input type='text' id='a43' class='square r5 c4'></input>
+        <input type='text' id='a44' class='square r5 c5'></input>
+        <input type='text' id='a45' class='square r5 c6'></input>
+        <input type='text' id='a46' class='square r5 c7'></input>
+        <input type='text' id='a47' class='square r5 c8'></input>
+        <input type='text' id='a48' class='square r5 c9'></input>
+        <br>
+        <input type='text' id='a50' class='square r6 c1'></input>
+        <input type='text' id='a51' class='square r6 c2'></input>
+        <input type='text' id='a52' class='square r6 c3'></input>
+        <input type='text' id='a53' class='square r6 c4'></input>
+        <input type='text' id='a54' class='square r6 c5'></input>
+        <input type='text' id='a55' class='square r6 c6'></input>
+        <input type='text' id='a56' class='square r6 c7'></input>
+        <input type='text' id='a57' class='square r6 c8'></input>
+        <input type='text' id='a58' class='square r6 c9'></input>
+        <br>
+        <input type='text' id='a60' class='square r7 c1'></input>
+        <input type='text' id='a61' class='square r7 c2'></input>
+        <input type='text' id='a62' class='square r7 c3'></input>
+        <input type='text' id='a63' class='square r7 c4'></input>
+        <input type='text' id='a64' class='square r7 c5'></input>
+        <input type='text' id='a65' class='square r7 c6'></input>
+        <input type='text' id='a66' class='square r7 c7'></input>
+        <input type='text' id='a67' class='square r7 c8'></input>
+        <input type='text' id='a68' class='square r7 c9'></input>
+        <br>
+        <input type='text' id='a70' class='square r8 c1'></input>
+        <input type='text' id='a71' class='square r8 c2'></input>
+        <input type='text' id='a72' class='square r8 c3'></input>
+        <input type='text' id='a73' class='square r8 c4'></input>
+        <input type='text' id='a74' class='square r8 c5'></input>
+        <input type='text' id='a75' class='square r8 c6'></input>
+        <input type='text' id='a76' class='square r8 c7'></input>
+        <input type='text' id='a77' class='square r8 c8'></input>
+        <input type='text' id='a78' class='square r8 c9'></input>
+        <br>
+        <input type='text' id='a80' class='square r9 c1'></input>
+        <input type='text' id='a81' class='square r9 c2'></input>
+        <input type='text' id='a82' class='square r9 c3'></input>
+        <input type='text' id='a83' class='square r9 c4'></input>
+        <input type='text' id='a84' class='square r9 c5'></input>
+        <input type='text' id='a85' class='square r9 c6'></input>
+        <input type='text' id='a86' class='square r9 c7'></input>
+        <input type='text' id='a87' class='square r9 c8'></input>
+        <input type='text' id='a88' class='square r9 c9'></input>
+        <br>
+    </div>
+    <button id='solve' class='mt-3 mr-3 rounded btn btn-success'>Solve<br> Puzzle</button>
+    <button id='puzzle2' class='mt-3 mr-3 rounded btn-primary'>Automorphic<br> Puzzle 1</button>
+    <button id='puzzle1' class='mt-3 mr-3 rounded btn-primary'>Expert Level <br>Puzzle 2</button>
+    <button id='puzzle3' class='mt-3 rounded btn-primary'>Evil Level<br> Puzzle 3</button><br>
+    <button id='puzzle4' class='mt-3 mr-3 rounded btn-primary'>Evil Level<br> Puzzle 4</button>
+    <button id='puzzle5' class='mt-3 mr-3 rounded btn-primary'>Evil Level<br> Puzzle 5</button>
+    <button id='puzzle6' class='mt-3 mr-3 rounded btn-primary'>Evil Level<br> Puzzle 6</button><br>
+    <button id='puzzle7' class='mt-3 mr-3 rounded btn-primary'>Hardest 4 A Human<br> Puzzle 7</button>
+    <button id='puzzle8' class='mt-3 mr-3 rounded btn-warning'>Hardest 4 Brute Force<br> Give it a minute!</button>
+    <button id='reset' class='mt-2 rounded btn btn-danger'>Reset<br>Puzzle</button>
+    <p id='info' class='mt-2'>Completed in <span id='time'></span> with <span id='fnCalls'></span> Function calls</p>
+
+
+    <!-- JQuery File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- My JS File-->
+    <script src="main.js"></script>
+</body>
+
+</html>

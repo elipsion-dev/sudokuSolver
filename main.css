@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+    border: 2vh solid;
+    border-image: repeating-radial-gradient(seashell, saddlebrown, brown 600px) 10;   
+    background-color: black;
+}
+.square {
+    height: 40px; 
+    width: 40px;
+    background-color: seashell;
+    border: 2px groove saddlebrown;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 5px 5px 5px 4px black;
+    font-size: 40px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+button {
+    font-size: 12px !important;
+    
+}
+#info {
+    color:white;
+    visibility: hidden;
+}
+span {
+    color: red;
+    font-weight: bold;
+}
+.c3, .c6 {
+ border-right: 5px solid brown; 
+}
+.c4, .c7 {
+    border-left: 5px solid brown; 
+}
+.r3, .r6 {
+    border-bottom: 5px solid brown; 
+}
+.r4, .r7 {
+    border-top: 5px solid brown; 
+}
